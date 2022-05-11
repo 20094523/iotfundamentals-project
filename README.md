@@ -48,7 +48,7 @@ wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
 unzip ngrok-stable-linux-arm.zip
 ```
 
-##Setting up the camera
+## Setting up the camera
 HTML:
 You will navigate to the /var/www folder and replace the index.html present there with the one provided in this github. Replace the embed in the code with your own embed that you got using the ```bash .ngrok http 8080``` command.
 MJPG-Streamer(running):
@@ -59,5 +59,5 @@ insert code from raspberry
 Python:
 A python file is supplied in this github, it is responsible for messaging you whenever your door is opened. All you need to do is change the twilio variables with ones you recorded previously during setup (auth token, UID, to and from phone numbers).
 
-##Closing
-If you run the python, mjpg streamer and have set up everything correctly (embedding stream into HTML, getting it to work in the first place, and set up twilio variables properly), then you will have a website which can be easily accessed on any device on a local network with ease, showing a constant video stream of what's in front of your door, along with a messaging system that will notify you whenever said door is opened.
+## Closing
+If you run the python, mjpg streamer and have set up everything correctly (embedding stream into HTML, getting it to work in the first place, and set up twilio variables properly), then you will have a website which can be easily accessed on any device on a local network with ease, showing a constant video stream of what's in front of your door, along with a messaging system that will notify you whenever said door is opened. All you really need to do at this point is physically attach the raspberry pi along with the camera to a door, with a power supply present.
