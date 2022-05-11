@@ -7,12 +7,14 @@ Follow the instructions on the website to unzip and stream to port 8080.
 ./ngrok http 8080
 ```
 This command will give you a screen similar to the one below. The circled link will be the one you'll embed.
-insert image here later
+![image](https://user-images.githubusercontent.com/74902424/167962120-0f2cc379-e3f3-4add-b2d6-ff78d81b4810.png)
+
 
 Another thing you'll need to set up is a twilio account for SMS functionality (https://twilio.com)
 Sign up for it, set up a twilio phone number (it'll be the phone that texts you alerts later)
 Make sure to note down the Account SID, Auth Token and said phone number, shown below.
-insert screenshot here
+![image](https://user-images.githubusercontent.com/74902424/167962148-a45c86f2-5e8c-4821-8083-fd1ad3f48df9.png)
+
 
 ## Terminal commands
 You will input these terminal commands to install an apache server, ngrok, mjpeg streamer and any python dependencies related to twilio.
@@ -56,3 +58,6 @@ insert code from raspberry
 ```
 Python:
 A python file is supplied in this github, it is responsible for messaging you whenever your door is opened. All you need to do is change the twilio variables with ones you recorded previously during setup (auth token, UID, to and from phone numbers).
+
+##Closing
+If you run the python, mjpg streamer and have set up everything correctly (embedding stream into HTML, getting it to work in the first place, and set up twilio variables properly), then you will have a website which can be easily accessed on any device on a local network with ease, showing a constant video stream of what's in front of your door, along with a messaging system that will notify you whenever said door is opened.
