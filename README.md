@@ -6,8 +6,8 @@ Follow the instructions on the website to unzip and stream to port 8080.
 ```bash 
 ./ngrok http 8080
 ```
-This command will give you a screen similar to the one below. The circled link will be the one you'll embed.
-![image](https://user-images.githubusercontent.com/74902424/167962120-0f2cc379-e3f3-4add-b2d6-ff78d81b4810.png)
+This command will give you a screen similar to the one below. It doesn't really matter which forwarding link you use, but use one of them.
+![image](https://user-images.githubusercontent.com/74902424/168344099-053ddd7b-47bd-42f5-9d66-26dc54cbc7fe.png)
 
 
 Another thing you'll need to set up is a twilio account for SMS functionality (https://twilio.com)
