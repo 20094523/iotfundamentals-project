@@ -1,17 +1,14 @@
 from sense_hat import SenseHat
 sense = SenseHat()
-from paho.mqtt import client as mqtt_client
 import time
 import random
 import os
 from twilio.rest import Client
 
-broker = 'broker.emqx.io'
-port = 1883
-topic = "/python/mqtt"
-client_id = f'python-mqtt-{random.randint(0, 1000)}'
-username = 'username'
-password = 'password'
+# Your Account SID from twilio.com/console
+account_sid = "ACCOUNT SID"
+# Your Auth Token from twilio.com/console
+auth_token  = "ACCOUNT TOKEN"
 
 while True:
   o = sense.get_orientation()
@@ -29,14 +26,14 @@ while True:
 ##
   if trueroll>=trueroll2 +20 or trueroll2>=trueroll +20:
     # Your Account SID from twilio.com/console
-    account_sid = "AC8861bc46213d6c73aed5cfc4cffbed89"
+    account_sid = "ACCOUNT SID"
     # Your Auth Token from twilio.com/console
-    auth_token  = "a859e7383a475c7951af57fb6971c061"
+    auth_token  = "ACCOUNT TOKEN"
 
     client = Client(account_sid, auth_token)
 
     message = client.messages.create(
-        to="+353867967343", 
-        from_="+19705195868",
-        body="Movement detected at door. Check website: http://streaming.local/")
+        to="YOUR PHONE NUMBER", 
+        from_="TWILIO PHONE NUMBER",
+        body="Movement detected at door. Check website: http://YOURPI'SNAME.local/")
     time.sleep(5)
