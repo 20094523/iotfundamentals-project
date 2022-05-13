@@ -48,7 +48,7 @@ unzip ngrok-stable-linux-arm.zip
 
 ## Setting up the camera
 HTML:
-You will navigate to the /var/www folder and replace the index.html present there with the one provided in this github. Replace the embed in the code with your own embed that you got using the ```bash .ngrok http 8080``` command.
+You will navigate to the /var/www folder and replace the index.html present there with the one provided in this github, along with the background.png (for aesthetic purposes). Replace the embed in the code with your own embed that you got using the ```bash .ngrok http 8080``` command.
 MJPG-Streamer(running):
 You will then run this code in a terminal that will be constantly open in the background.
 ```bash
