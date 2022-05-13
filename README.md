@@ -38,8 +38,6 @@ sudo apt-get install gcc g++
 cd mjpg-streamer-experimental
 make
 sudo make install
-  
-  insert rest of code later since its on pi
 ```
 
 Ngrok:
@@ -54,7 +52,14 @@ You will navigate to the /var/www folder and replace the index.html present ther
 MJPG-Streamer(running):
 You will then run this code in a terminal that will be constantly open in the background.
 ```bash
-insert code from raspberry
+mkdir /tmp/stream
+raspistill --nopreview -w 640 -h 480 -q 5 -o /tmp/stream/pic.jpg -tl 100 -t 9999999 -th 0:0:0 &
+```
+The code below will then be ran after, outputting the stream above onto an accessible website which you can embed easily.
+```bash
+cd mjpg-streamer/mjpg-streamer-experimental
+export LD_LIBRARY_PATH=.
+./mjpg_streamer -i "input_file.so -f /tmp/stream -n pic.jpg" -o "output_http.so -w ./www"
 ```
 Python:
 A python file is supplied in this github, it is responsible for messaging you whenever your door is opened. All you need to do is change the twilio variables with ones you recorded previously during setup (auth token, UID, to and from phone numbers).
